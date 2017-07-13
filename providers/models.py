@@ -3,7 +3,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 from django.contrib.gis.db.models import PolygonField
 from django.contrib.auth.models import AbstractBaseUser
 
-# Create your models here.
+
 class Provider(AbstractBaseUser):
     """
     A model that defines providers.
@@ -33,7 +33,7 @@ class Polygon(models.Model):
     )
     price = models.DecimalField(max_digits=10, decimal_places=2)
     provider = models.ForeignKey('Provider', on_delete=models.CASCADE)
-    geojson = PolygonField(verbose_name='Coordinates')
+    geojson = PolygonField(verbose_name='Coordinates', db_index=True)
 
     def __str__(self):
         return self.name

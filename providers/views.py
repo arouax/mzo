@@ -5,9 +5,11 @@ from rest_framework.response import Response
 from .serializers import ProviderSerializer, PolygonSerializer, PointSerializer
 from django.contrib.gis.geos import GEOSGeometry
 
+
 class ProviderViewSet(viewsets.ModelViewSet):
     """
     API endpoint to CRUD the providers.
+    User should be staff.
     """
     queryset = Provider.objects.all()
     serializer_class = ProviderSerializer
@@ -24,7 +26,7 @@ class PolygonViewSet(viewsets.ModelViewSet):
 
 class PointView(APIView):
     """
-    Lists all polygons, that contain a point.
+    Lists all polygons that contain a point.
     """
     def get(self, request):
         return Response()
