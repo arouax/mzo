@@ -1,0 +1,6 @@
+nohup.out
+__init__*
+__pycache__/
+.project
+*.pyc
+staticfiles
