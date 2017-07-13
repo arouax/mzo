@@ -9,11 +9,9 @@ from django.contrib.gis.geos import GEOSGeometry
 class ProviderViewSet(viewsets.ModelViewSet):
     """
     API endpoint to CRUD the providers.
-    User should be staff.
     """
     queryset = Provider.objects.all()
     serializer_class = ProviderSerializer
-    permission_classes = (permissions.IsAdminUser,)
 
 
 class PolygonViewSet(viewsets.ModelViewSet):
