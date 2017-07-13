@@ -3,5 +3,5 @@
 
 + List of providers is at /providers/
 + List of polygons (areas) is at /polygons/
-+ An API to quiery points is at /points/
++ An API to quiery points is at /providers/get-by-point/
 + docs are at /api-docs/ 

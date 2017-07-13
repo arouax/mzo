@@ -152,7 +152,7 @@ class PolygonContainsPointTest(TestCase):
         point = """{ "type": "Point",
         "coordinates": [ 2.320880238279669, 48.865491458298109 ] }"""
         point_geojson = GEOSGeometry(point)
-        request = factory.post('/points/',
+        request = factory.post('/providers/get-by-point/',
                                json.dumps(point),
                                content_type='application/json',
                               )

@@ -18,7 +18,7 @@ schema_view = get_schema_view(
     renderer_classes=[OpenAPIRenderer, SwaggerUIRenderer])
 
 urlpatterns = [
-    url(r'^points/$', views.PointView.as_view()),
+    url(r'^providers/get-by-point/$', views.PointView.as_view()),
     url(r'^', include(router.urls)),
     url(r'^api-auth/',
         include('rest_framework.urls', namespace='rest_framework')),
